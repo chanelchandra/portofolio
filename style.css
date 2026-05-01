@@ -50,7 +50,7 @@ section {
 }
 
 .container-date {
-    padding-top: 50px; /* space on top */
+    padding-top: 70px; /* space on top */
     text-align: center;
     display: flex; /* flexible */
     margin: 0px;
@@ -59,11 +59,11 @@ section {
 }
 
 #date{
-    font-size: 40px;
+    font-size: 36px;
 }
 #clock{
     line-height: 0.9; /* pulls clock up */
-    font-size: 15vw;
+    font-size: 14vw;
 }
 
 @media (max-width: 600px) {
