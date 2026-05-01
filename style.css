@@ -11,7 +11,7 @@ html, body {
     height: 200vh;
     background: #000;
     scroll-snap-type: y mandatory;
-    overflow-y: auto; /* Ensures the wrapper handles the scroll snap */
+    overflow-y: auto;
 }
 
 section {
@@ -31,9 +31,9 @@ section {
     z-index: 2;
 }
 
-/* This is the class we will trigger with the arrow */
+/* trigger  the arrow */
 .lock-screen.recovering {
-    position: fixed; /* Fixes it to the camera/viewport while sliding */
+    position: fixed;
     transform: translateY(0);
 }
 
@@ -81,7 +81,7 @@ section {
     left: 50%;
     transform: translateX(-50%);
     width: 200px;
-    height: 40px; /* Hover area height */
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,7 +93,7 @@ section {
 .arrow-icon {
     transition: all 0.3s ease;
     position: relative;
-    background: #ccc; /* Give it a light grey color so it's visible */
+    background: #ccc;
 }
 
 /* Make it look like a chevron/arrow on hover */
@@ -103,7 +103,7 @@ section {
     transition: all 0.3s ease;
 }
 
-/* Pseudo-elements to create the 'V' shape if you want it more detailed */
+/* create the 'V' shape */
 .arrow-icon::before, .arrow-icon::after {
     content: '';
     position: absolute;
