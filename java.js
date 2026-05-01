@@ -24,3 +24,17 @@ function startTime() {
     // Refresh the function every 1000ms (1 second)
     setTimeout(startTime, 1000);
 }
+
+async function unlock() {
+    const lockScreen = document.getElementById('lock-screen');
+    
+    // 1. Pull the lock screen down
+    lockScreen.classList.add('active');
+
+    // 2. Wait for the CSS transition to finish (e.g., 500ms)
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    // 3. If you remove the class here, the lock screen will immediately 
+    // jump or slide back up. Only remove it if you want it to disappear again!
+    lockScreen.classList.remove('active');
+}

@@ -9,12 +9,33 @@
 
 <body onload="startTime()">
 
-    <div class="container-date">
-        <div id="date"></div>
-        <div id="clock"></div>
-    </div>
+    <div class="main-wrapper">
+        <!-- SECTION 1: HOME Screen -->
+         <section class="home-screen">
 
-    <hr>
+            <div class="drop-down-trigger" onclick="unlock()">
+                <div class="arrow-icon"></div>
+            </div>
+
+            <div class="home-content">
+                <h1>Welcome Home</h1>
+                <p>This content was here the whole time!</p>
+            </div>
+
+        </section>
+
+        <!-- SECTION 2: Home Screen (homescreen content) -->
+        <section class="lock-screen" id ="lock-screen">
+
+            <div class="container-date">
+                <div id="date"></div>
+                <div id="clock"></div>
+            </div>
+            <div class="horizontal-line"></div> <!--rounded line -->
+
+        </section>
+        
+    </div>
     
 </body>
 </html>
