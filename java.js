@@ -25,16 +25,17 @@ function startTime() {
     setTimeout(startTime, 1000);
 }
 
-async function unlock() {
-    const lockScreen = document.getElementById('lock-screen');
-    
-    // 1. Pull the lock screen down
-    lockScreen.classList.add('active');
+function unlock() {
+    // 1. Simply scroll the entire page back to the top (0,0)
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 
-    // 2. Wait for the CSS transition to finish (e.g., 500ms)
-    await new Promise(resolve => setTimeout(resolve, 500));
-
-    // 3. If you remove the class here, the lock screen will immediately 
-    // jump or slide back up. Only remove it if you want it to disappear again!
-    lockScreen.classList.remove('active');
+    // 2. Optional: If you find it's not "snapping" perfectly, 
+    // you can force the snap after a tiny delay
+    setTimeout(() => {
+        const lockScreen = document.getElementById('lock-screen');
+        lockScreen.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
 }

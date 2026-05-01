@@ -31,8 +31,10 @@ section {
     z-index: 2;
 }
 
-.lock-screen.active {
-    bottom: -100vh;
+/* This is the class we will trigger with the arrow */
+.lock-screen.recovering {
+    position: fixed; /* Fixes it to the camera/viewport while sliding */
+    transform: translateY(0);
 }
 
 .horizontal-line {
