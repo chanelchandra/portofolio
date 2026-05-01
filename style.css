@@ -1,0 +1,28 @@
+.container-date {
+    padding-top: 50px; /* space on top */
+    text-align: center;
+    display: flex; /* flexible */
+    margin: 0px;
+    gap: 0px;
+    flex-direction: column; /* stacked vertically */
+}
+
+#date{
+    font-size: 25px;
+}
+#clock{
+    line-height: 0.9; /* pulls clock up */
+    font-size: 150px;
+}
+
+hr {
+    border: none;
+    height: 6px;
+    width: 250px;
+    background-color: #333;
+    border-radius: 5px;
+    bottom: 10px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
