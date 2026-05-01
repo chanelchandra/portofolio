@@ -124,3 +124,27 @@ section {
     background: #fff;
     z-index: 1; 
 }
+
+.apps{
+    padding: 40px;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container-app{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.app{
+    height: calc((50vw/6) - 20px);
+    width: calc((50vw/6) - 20px);
+    background-color: #333;
+    border-radius: 2vw;
+}
+.widget{
+    height: calc((((50vw/6) - 20px) * 2) + 20px);
+    width: calc(((50vw/6) * 4) - 75px);
+    background-color: #333;
+    border-radius: 2vw;
+}

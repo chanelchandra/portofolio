@@ -26,14 +26,6 @@ function startTime() {
 }
 
 function unlock() {
-    // 1. Simply scroll the entire page back to the top (0,0)
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-
-    // 2. Optional: If you find it's not "snapping" perfectly, 
-    // you can force the snap after a tiny delay
     setTimeout(() => {
         const lockScreen = document.getElementById('lock-screen');
         lockScreen.scrollIntoView({ behavior: 'smooth' });
