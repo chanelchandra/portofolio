@@ -125,7 +125,7 @@ section {
     z-index: 1; 
 }
 
-@media (min-width: 400px){
+@media (min-width: 600px){
     .phone-apps{
         display: none;
     }
@@ -179,7 +179,7 @@ section {
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 600px){
     .tab-apps{
         display: none;
     }
