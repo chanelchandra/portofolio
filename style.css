@@ -59,14 +59,14 @@ section {
 }
 
 #date{
-    font-size: 32px;
+    font-size: 3vw;
 }
 #clock{
     line-height: 0.9; /* pulls clock up */
-    font-size: 22vw;
+    font-size: 14vw;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     #clock {
         font-size: 100px;
     }
@@ -125,12 +125,6 @@ section {
     z-index: 1; 
 }
 
-.apps{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
 @media (min-width: 400px){
     .phone-apps{
         display: none;
@@ -138,36 +132,41 @@ section {
     .tab-apps{
         margin: 30px;
         justify-items: center;
+        max-height: 60vh;
+        justify-content: space-between;
     }
     .app{
         height: calc(((100vw - 60px) - (3vw * 5)) / 6);
         width: calc(((100vw - 60px) - (3vw * 5)) / 6);
         background-color: #333;
-        border-radius: 3vw;
+        border-radius: min(3vw, 30px);
+        max-height: 15vh;
+        max-width: 15vh;
     }
     .widget2{
         height: calc(((((100vw - 60px) - (3vw * 5)) / 6) * 2) + 3vw);
         width: calc(((((100vw - 60px) - (3vw * 5)) / 6) * 2) + 3vw);
         background-color: #333;
-        border-radius: 5vw;
-        margin: 1.5vw 0 ;
+        border-radius: min(5vw, 50px);
+        max-height: 30vh;
+        max-width: 30vh
     }
-    .tab-row{
+    #row1{
+        width: calc(100vw - 60px);
         display: flex;
         flex-direction: row;
-        background-color: #ccc;
-        gap: 0px;
+        background-color: #cccccc87;
+        gap: 3vw;
+        max-height: 30vh;
     }
     .tab-app-row{
-        width: calc(100vw - 60px);
         gap:3vw;
-        padding: 1.5vw;
     }
     #approw1{
-        background-color: rgba(255, 228, 196, 0.5);
-        transform: translateX(calc(((((100vw - 60px) - (3vw * 5)) / 6) * 2) + (3vw * 2)));
+        width: calc((100vw - 60px) - (((((100vw - 60px) - (3vw * 5)) / 6) * 2) + 6vw));
         display: flex;
         flex-direction: row;
+        background-color: rgba(255, 228, 196, 0.704);
     }
     #approw2{
         display: flex;
