@@ -43,7 +43,7 @@ section {
     left: 50%;
     transform: translate(-50%);
     bottom: 20px;
-    width: 300px;
+    width: 60vw;
     height: 5px;
     background: white;
     border-radius: 10px;
@@ -59,16 +59,16 @@ section {
 }
 
 #date{
-    font-size: 36px;
+    font-size: 32px;
 }
 #clock{
     line-height: 0.9; /* pulls clock up */
-    font-size: 14vw;
+    font-size: 22vw;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     #clock {
-        font-size: 120px;
+        font-size: 100px;
     }
     #date{
         font-size: 25px;
@@ -126,25 +126,93 @@ section {
 }
 
 .apps{
-    padding: 40px;
-    display:flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.container-app{
+    align-items: center;
+    justify-content: center;
     display: flex;
-    flex-direction: row;
-    gap: 15px;
 }
-.app{
-    height: calc((50vw/6) - 20px);
-    width: calc((50vw/6) - 20px);
-    background-color: #333;
-    border-radius: 2vw;
+
+@media (min-width: 400px){
+    .phone-apps{
+        display: none;
+    }
+    .tab-apps{
+        margin: 30px;
+        justify-items: center;
+    }
+    .app{
+        height: calc(((100vw - 60px) - (3vw * 5)) / 6);
+        width: calc(((100vw - 60px) - (3vw * 5)) / 6);
+        background-color: #333;
+        border-radius: 3vw;
+    }
+    .widget2{
+        height: calc(((((100vw - 60px) - (3vw * 5)) / 6) * 2) + 3vw);
+        width: calc(((((100vw - 60px) - (3vw * 5)) / 6) * 2) + 3vw);
+        background-color: #333;
+        border-radius: 5vw;
+        margin: 1.5vw 0 ;
+    }
+    .tab-row{
+        display: flex;
+        flex-direction: row;
+        background-color: #ccc;
+        gap: 0px;
+    }
+    .tab-app-row{
+        width: calc(100vw - 60px);
+        gap:3vw;
+        padding: 1.5vw;
+    }
+    #approw1{
+        background-color: rgba(255, 228, 196, 0.5);
+        transform: translateX(calc(((((100vw - 60px) - (3vw * 5)) / 6) * 2) + (3vw * 2)));
+        display: flex;
+        flex-direction: row;
+    }
+    #approw2{
+        display: flex;
+        flex-direction: row;
+    }
+    #approw3{
+        display: flex;
+        flex-direction: row;
+        gap: calc(((((100vw - 60px) - (3vw * 5)) / 6) * 4) + (3vw * 5))
+    }
 }
-.widget{
-    height: calc((((50vw/6) - 20px) * 2) + 20px);
-    width: calc(((50vw/6) * 4) - 75px);
-    background-color: #333;
-    border-radius: 2vw;
+
+@media (max-width: 400px){
+    .tab-apps{
+        display: none;
+    }
+    .phone-apps{
+        margin: 30px;
+        justify-items: center;
+    }
+    .app{
+        height: calc(((100vw - 60px) - (5vw * 3)) / 4);
+        width: calc(((100vw - 60px) - (5vw * 3)) / 4);
+        background-color: #333;
+        border-radius: 5vw;
+    }
+    .widget1{
+        height: calc(((((100vw - 60px) - (5vw * 3)) / 4) * 2) + 5vw);
+        width: calc(100vw - 60px);
+        background-color: #333;
+        border-radius: 5vw;
+        margin: 5vw 0 ;
+    }
+    .widget2{
+        transform: translateX(calc(-1 * (((100vw - 60px) - (5vw * 3)) / 4) - 5vw));
+        height: calc(((((100vw - 60px) - (5vw * 3)) / 4) * 2) + 5vw);
+        width: calc(((((100vw - 60px) - (5vw * 3)) / 4) * 2) + 5vw);
+        background-color: #333;
+        border-radius: 5vw;
+        margin: 5vw 0 ;
+    }
+    .phone-row{
+        width: calc(100vw - 60px);
+        gap: 5vw;
+        display: flex;
+        flex-direction: row;
+    }
 }
